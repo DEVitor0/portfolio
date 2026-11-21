@@ -1,0 +1,57 @@
+.cap::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #fff;
+  margin-bottom: 14px;
+  transform-origin: 0;
+  animation: bar 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes bar {
+  from {
+    transform: scaleX(0);
+  }
+}
+.cap .wm {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.12em;
+  margin-right: 0.22em;
+}
+.cap .wm > span {
+  display: inline-block;
+  animation: rw 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(var(--i) * 70ms + 0.15s);
+}
+@keyframes rw {
+  from {
+    transform: translateY(110%) rotate(6deg);
+  }
+}
+.cap p {
+  animation: fi 0.9s 0.45s both;
+}
+@keyframes fi {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+.bn {
+  position: absolute;
+  right: calc(var(--px) + 40px);
+  bottom: 5vh;
+  font: 900 clamp(8rem, 26vw, 24rem)/0.8 var(--d);
+  font-variation-settings: "wdth" 64;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+  animation: bn 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes bn {
+  from {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+}

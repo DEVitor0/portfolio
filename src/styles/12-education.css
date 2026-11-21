@@ -1,0 +1,128 @@
+.fm {
+  overflow: hidden;
+}
+.fm .kk,
+.fm .ti,
+.fm .ed {
+  position: relative;
+  z-index: 1;
+}
+.fc {
+  position: absolute;
+  top: -90px;
+  width: var(--s);
+  animation: fcl var(--t) linear infinite;
+  animation-delay: var(--dl);
+  pointer-events: none;
+  opacity: 0.85;
+}
+.fc svg {
+  display: block;
+  width: 100%;
+}
+.fm:not(.in) .fc {
+  animation-play-state: paused;
+  opacity: 0;
+}
+@keyframes fcl {
+  0% {
+    transform: translateY(0) rotate(var(--r0));
+  }
+  100% {
+    transform: translateY(calc(100vh + 200px)) rotate(calc(var(--r0) + 540deg));
+  }
+}
+.dipw {
+  position: absolute;
+  right: var(--px);
+  top: clamp(5rem, 12vh, 8rem);
+  width: clamp(96px, 15vw, 200px);
+  z-index: 1;
+  transform-origin: 50% 0;
+}
+.fm:not(.in) .dipw,
+.fm:not(.in) .ed > div {
+  opacity: 0;
+}
+.fm.in .dipw {
+  animation: dpl 1.7s cubic-bezier(0.3, 1.3, 0.5, 1) both;
+}
+@keyframes dpl {
+  0% {
+    transform: translateY(-70vh) rotate(-28deg);
+  }
+  55% {
+    transform: translateY(0) rotate(7deg);
+  }
+  72% {
+    transform: translateY(-14px) rotate(-4deg);
+  }
+  86% {
+    transform: translateY(0) rotate(2deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+.ed > div {
+  position: relative;
+}
+.fm.in .ed > div {
+  animation: ed 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.fm.in .ed > div:nth-child(2) {
+  animation-delay: 0.15s;
+}
+@keyframes ed {
+  from {
+    opacity: 0;
+    transform: translateY(60px) rotate(-2deg);
+  }
+}
+.seal {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--b);
+  box-shadow:
+    0 0 0 4px #fff,
+    0 0 0 6px var(--b);
+  opacity: 0;
+}
+.seal::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  background: #fff;
+  clip-path: polygon(
+    50% 0,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+.fm.in .seal {
+  animation: st 0.6s 1.2s cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+.fm.in .ed > div:nth-child(2) .seal {
+  animation-delay: 1.4s;
+}
+@keyframes st {
+  from {
+    transform: scale(3) rotate(-35deg);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

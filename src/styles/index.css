@@ -1,0 +1,22 @@
+/* A ordem importa: é a mesma cascata do CSS original. */
+@import "./00-base.css";
+@import "./01-cursor-nav.css";
+@import "./02-layout.css";
+@import "./03-hero.css";
+@import "./04-journey.css";
+@import "./05-intro.css";
+@import "./06-backdrop.css";
+@import "./07-intro-layout.css";
+@import "./08-viz.css";
+@import "./09-about.css";
+@import "./10-ping.css";
+@import "./11-journey-caption.css";
+@import "./12-education.css";
+@import "./13-about-details.css";
+@import "./14-projects.css";
+@import "./15-opensource-skills.css";
+@import "./16-experience.css";
+@import "./17-education-certificates.css";
+@import "./18-contact.css";
+@import "./19-responsive.css";
+@import "./20-reduced-motion.css";

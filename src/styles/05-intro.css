@@ -1,0 +1,153 @@
+/* sobre */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.vw {
+  display: inline-block;
+  margin-right: 0.26em;
+  opacity: 0.14;
+  will-change: opacity, filter, transform;
+}
+#conceito {
+  height: 560vh;
+}
+.ip {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--px);
+  color: #fff;
+}
+.it2 {
+  font: 500 clamp(1.5rem, min(3.7vw, 5.6vh), 3.3rem)/1.14 var(--d);
+  font-variation-settings: "wdth" 88;
+  letter-spacing: -0.015em;
+  max-width: 25em;
+  text-shadow: 0 2px 30px rgba(10, 20, 120, 0.55);
+}
+.sl {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--px);
+  pointer-events: none;
+}
+.sx {
+  position: relative;
+  font: 700 clamp(1.9rem, min(5.4vw, 9.4vh), 5.2rem)/1.06 var(--d);
+  font-variation-settings: "wdth" 82;
+  letter-spacing: -0.025em;
+  max-width: 17em;
+  text-shadow: 0 2px 30px rgba(10, 20, 120, 0.5);
+}
+.sl {
+  visibility: hidden;
+  transition: visibility 0s;
+}
+.sl.on {
+  visibility: visible;
+}
+.sl.out {
+  visibility: visible;
+  transition: visibility 0s 0.8s;
+}
+.sl.out {
+  visibility: hidden;
+}
+.sx::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -2rem;
+  width: 90px;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: 0;
+  transition: transform 0.3s;
+}
+.sl.on .sx::before {
+  transform: none;
+  transition: transform 0.9s 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.sw {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding: 0.04em 0 0.16em;
+  margin: 0 0.22em -0.16em 0;
+}
+.sw > span {
+  display: inline-block;
+  transform: translateY(135%) rotate(5deg);
+  opacity: 0;
+  transition:
+    transform 0.5s cubic-bezier(0.5, 0, 0.2, 1),
+    opacity 0.3s;
+}
+.sl.on .sw > span {
+  transform: none;
+  opacity: 1;
+  transition:
+    transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.4s;
+  transition-delay: calc(0.6s + var(--i) * 50ms);
+}
+.sl.out .sw > span,
+.sl.gone .sw > span {
+  transform: translateY(-135%) rotate(-4deg);
+  opacity: 0;
+  transition-delay: calc(var(--i) * 18ms);
+}
+.sw.em > span {
+  border-radius: 0.14em;
+  padding: 0 0.14em;
+}
+.sl.out .sw.em > span {
+  background: #fff;
+  color: var(--b);
+  text-shadow: none;
+}
+.sl.on .sw.em > span {
+  background: #fff;
+  color: var(--b);
+  text-shadow: none;
+  transition:
+    transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.4s,
+    background 0.5s,
+    color 0.5s;
+  transition-delay:
+    calc(0.6s + var(--i) * 50ms), calc(0.6s + var(--i) * 50ms), 1.5s, 1.5s;
+}
+.spg {
+  position: absolute;
+  left: var(--px);
+  bottom: 6vh;
+  width: min(360px, calc(100% - 2 * var(--px)));
+  display: flex;
+  gap: 8px;
+}
+.spg i {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.spg i::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  transform: scaleX(var(--f, 0));
+  transform-origin: 0;
+}

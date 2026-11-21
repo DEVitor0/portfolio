@@ -1,0 +1,56 @@
+@media (prefers-reduced-motion: reduce) {
+  .vr1,
+  .vr2,
+  .ping i {
+    animation: none;
+  }
+  .sp {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .vn .va,
+  .vn .vb {
+    transform: none;
+    transition: none;
+  }
+  .vn .lens {
+    opacity: 1;
+    transition: none;
+  }
+  .hring g.r1,
+  .hring g.r2 {
+    animation: none;
+  }
+  .sw > span,
+  .sx::before {
+    transition: none;
+  }
+  .fc {
+    display: none;
+  }
+  .cap::before,
+  .cap .wm > span,
+  .cap p,
+  .bn,
+  .fm.in .dipw,
+  .fm.in .ed > div,
+  .fm.in .seal {
+    animation: none;
+  }
+  .seal {
+    opacity: 1;
+  }
+  .mk > span,
+  .nm .ch {
+    transform: none;
+    transition: none;
+  }
+  .sc i,
+  .cap {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

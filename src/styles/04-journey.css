@@ -1,0 +1,70 @@
+/* jornada */
+#jornada {
+  height: 560vh;
+}
+.pin {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--px);
+  color: #fff;
+}
+.cap {
+  max-width: 440px;
+  padding: 28px 30px;
+  background: rgba(8, 16, 90, 0.5);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 20px;
+  animation: cp 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes cp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+}
+.cap code {
+  font: 500 0.85rem var(--m);
+  opacity: 0.8;
+}
+.cap h3 {
+  font: 800 clamp(1.7rem, 3vw, 2.5rem)/1.05 var(--d);
+  font-variation-settings: "wdth" 76;
+  margin: 0.6rem 0 0.8rem;
+}
+.cap.intro {
+  max-width: 580px;
+}
+.cap.intro p {
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+.cap p.lg {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-top: 0.7rem;
+}
+.stp {
+  position: absolute;
+  right: var(--px);
+  top: 50%;
+  translate: 0 -50%;
+  display: grid;
+  gap: 12px;
+}
+.stp i {
+  display: block;
+  width: 34px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.35);
+  transition:
+    width 0.4s,
+    background 0.4s;
+}
+.stp i.on {
+  width: 64px;
+  background: #fff;
+}

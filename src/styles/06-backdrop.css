@@ -1,0 +1,53 @@
+.hbg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.hbg canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.hbg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 72% 38%,
+      rgba(255, 255, 255, 0.12),
+      transparent 55%
+    ),
+    radial-gradient(ellipse at 40% 115%, rgba(5, 12, 90, 0.6), transparent 60%);
+}
+.hring {
+  position: absolute;
+  right: -10vmin;
+  top: 50%;
+  translate: 0 -50%;
+  width: min(80vmin, 920px);
+  aspect-ratio: 1;
+  opacity: 0.55;
+}
+.hring g.r1,
+.hring g.r2 {
+  transform-box: view-box;
+  transform-origin: 200px 200px;
+  animation: rot 46s linear infinite;
+}
+.hring g.r2 {
+  animation-duration: 30s;
+  animation-direction: reverse;
+}
+@keyframes rot {
+  to {
+    transform: rotate(360deg);
+  }
+}
+#topo > *:not(.hbg) {
+  position: relative;
+  z-index: 1;
+}

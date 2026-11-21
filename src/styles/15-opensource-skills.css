@@ -1,0 +1,55 @@
+/* open source */
+.os {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 4vw;
+  align-items: center;
+  min-height: 70svh;
+}
+.big {
+  font: 900 clamp(7rem, 28vw, 26rem)/0.78 var(--d);
+  font-variation-settings: "wdth" 64;
+  letter-spacing: -0.04em;
+  color: var(--b);
+}
+.os p {
+  font-size: 1.25rem;
+  max-width: 34ch;
+}
+/* skills */
+.mq {
+  display: flex;
+  gap: 4vw;
+  white-space: nowrap;
+  width: max-content;
+  font: 900 clamp(3.6rem, 11vw, 10rem)/1.05 var(--d);
+  font-variation-settings: "wdth" 70;
+  text-transform: uppercase;
+  will-change: transform;
+  margin-bottom: 1vh;
+}
+.mq span:nth-child(even) {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+.sk {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3vw;
+  margin-top: 6vh;
+  padding: 0 var(--px);
+}
+.sk h3 {
+  font: 700 1.1rem var(--d);
+  font-variation-settings: "wdth" 90;
+  margin-bottom: 0.6rem;
+}
+.sk li {
+  list-style: none;
+  padding: 9px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  transition: padding 0.2s;
+}
+.sk li:hover {
+  padding-left: 10px;
+}

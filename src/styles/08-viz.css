@@ -1,0 +1,45 @@
+.viz {
+  position: absolute;
+  right: calc(var(--px) + 70px);
+  top: 50%;
+  translate: 0 -50%;
+  width: min(52vw, 76vh);
+  z-index: 1;
+  overflow: visible;
+}
+.viz .sc {
+  transition: opacity 0.6s;
+}
+.viz .o {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.viz .o3 {
+  opacity: 0.3;
+}
+.viz .o5 {
+  opacity: 0.55;
+}
+.viz .f {
+  fill: #fff;
+}
+.viz .ln {
+  fill: #fff;
+  fill-opacity: 0;
+  stroke: #fff;
+  stroke-width: 2;
+  opacity: 0.55;
+}
+.vr1,
+.vr2 {
+  transform-box: view-box;
+  transform-origin: 300px 300px;
+  animation: rot 70s linear infinite;
+}
+.vr2 {
+  animation-duration: 48s;
+  animation-direction: reverse;
+}
